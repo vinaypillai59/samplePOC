@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  demoapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: demoapp
+    container_name: demoapp
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "70:8080"
+    volumes:
+      - .:/home/node/demoapp
+    command: /home/node/demoapp/node_modules/.bin/nodemon /home/node/demoapp/bin/www

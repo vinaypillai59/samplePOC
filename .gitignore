@@ -1,0 +1,7 @@
+.git
+node_modules
+_references
+.vscode
+logs
+package-lock.json
+.env
